@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="id">User Id:</label>
+                    <input type="text" id="id" class="form-control" formControlName="id">
+                    <span class="errors" *ngIf="!registerForm.get('id').valid && registerForm.get('id').touched">Enter a Valid Id</span>
+                </div>
+                <div class="form-group">
+                    <label for="vehicleNo">Vehicle No:</label>
+                    <input type="text" id="vehicleNo" class="form-control" formControlName="vehicleNo">
+                    <span class="errors" *ngIf="!registerForm.get('vehicleNo').valid && registerForm.get('vehicleNo').touched">Enter a Valid Vehicle Number</span>
+                </div>
+                <div class="form-group">
+                    <label for="driverName">Driver Name:</label>
+                    <input type="text" id="driverName" class="form-control" formControlName="driverName">
+                    <span class="errors" *ngIf="!registerForm.get('driverName').valid && registerForm.get('driverName').touched">Enter a Valid Driver Name</span>
+                </div>
+               
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" class="form-control" formControlName="age">
+                    <span class="errors" *ngIf="!registerForm.get('age').valid && registerForm.get('age').touched">Enter a Valid Age</span>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" class="form-control" formControlName="gender">
+                    <span class="errors" *ngIf="!registerForm.get('gender').valid && registerForm.get('gender').touched">Enter a Valid Gender</span>
+                </div>
+                <div class="form-group">
+                    <label for="hospital">Hospital:</label>
+                    <input type="text" id="hospital" class="form-control" formControlName="hospital">
+                    <span class="errors" *ngIf="!registerForm.get('hospital').valid && registerForm.get('hospital').touched">Enter a Valid Hospital</span>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" class="form-control" formControlName="location">
+                    <span class="errors" *ngIf="!registerForm.get('location').valid && registerForm.get('location').touched">Enter a Valid Location</span>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNo">Phone Number:</label>
+                    <input type="text" id="phoneNo" class="form-control" formControlName="phoneNo">
+                    <span class="errors" *ngIf="!registerForm.get('phoneNo').valid && registerForm.get('phoneNo').touched">Enter a Valid Phone Number</span>
+                </div>
+                
+                <button class="btn btn-success mt-4" [disabled]="!registerForm.valid">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

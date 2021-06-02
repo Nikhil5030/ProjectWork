@@ -1,0 +1,38 @@
+<div class="container">
+    <table class="table table-dark text-white">  
+        <thead>
+            <caption class="text-dark" style="float: right;">Ambulance Details</caption>
+            <tr>
+                <th>Id</th>
+                <th>VehicleNumber</th>
+                <th>DriverName</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Hospital</th>
+                <th>Location</th>
+                <th>PhoneNumber</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ambulance of ambulances">
+                <td>{{ ambulance.id }}</td>
+                <td>{{ ambulance.vehicleNo }}</td>
+                <td>{{ ambulance.driverName }}</td>
+                <td>{{ ambulance.age }}</td>
+                <td>{{ ambulance.gender }}</td>
+                <td>{{ ambulance.hospital }}</td>
+                <td>{{ ambulance.location }}</td>
+                <td>{{ ambulance.phoneNo }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="updateAmbulance(ambulance)">Update</button> |
+                    <button class="btn btn-danger" (click)="deleteAmbulance(ambulance)">Delete</button> |
+                    <button class="btn btn-success" (click)="showAmbulance(ambulance)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
